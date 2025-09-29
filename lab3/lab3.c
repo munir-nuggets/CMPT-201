@@ -1,0 +1,33 @@
+#define _POSIX_C_SOURCE 200809L
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void printQueue(char *s[]);
+void addElem(char *s[], char *line);
+
+int main() {
+
+  char *line = NULL;
+  size_t len = 0;
+  char *queue[5];
+
+  while (1) {
+    printf("Enter input: ");
+    ssize_t size = getline(&line, &len, stdin);
+    if (size == -1) {
+      perror("error reading file");
+    }
+
+    if (line == "print") {
+      //  printQueue(queue);
+    } else {
+      //    addElem(queue, line);
+    }
+  }
+  free(line);
+}
+
+// void printQueue(char* s[]) {
+// }
+// void addElem(char* s[], char* line);
